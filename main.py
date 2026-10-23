@@ -15,7 +15,7 @@ app.mount("/static", StaticFiles(directory='static'), name = 'static')
 
 @app.get("/")
 def test(request: Request):
-    return RedirectResponse(url = '/todoscls/todo-page', status_code = status.HTTP_302_FOUND)
+    return RedirectResponse(url = '/todos/todo-page', status_code = status.HTTP_302_FOUND)
 
 app.include_router(auth.router)
 app.include_router(todos.router)
